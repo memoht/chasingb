@@ -1,0 +1,18 @@
+/* import sytlesheets
+   refer to https://github.com/zurb/foundation-rails
+*/
+
+/* color variables */
+$brownie: rgba(57, 34, 38, 0.85);
+$brickred: rgb(160, 20, 40);
+$burgundy: rgb(167, 31, 36);
+$lightgray: rgba(24, 24, 24, 0.75);
+$silver: rgb(204, 204, 204);
+$snow: rgb(245, 245, 245);
+$tungsten: rgb(51, 51, 51);
+
+
+/* @import "foundation"; */
+@import "jquery.ui.datepicker";
+@import "jquery.ui.autocomplete";
+@import "pages";
