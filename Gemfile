@@ -13,26 +13,54 @@ gem 'pg'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
+  gem 'jquery-ui-rails'
+  gem 'asset_sync'
+  gem 'compass-rails', '~> 1.0.3'
+  gem 'zurb-foundation', '~> 3.0.9'
 end
 
 gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+# Project specific gems
+  gem 'carrierwave'
+  gem 'cancan'
+  gem 'clearance'
+  gem "exception_notification", '~> 2.6.1'
+  gem 'ffaker'
+  gem 'fog'
+  gem 'haml'
+  gem 'haml-rails'
+  gem 'pacecar'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+# RSpec needs to be in :development group to expose generators
+# and rake tasks without having to type RAILS_ENV=test.
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'ruby_gntp'
+  gem 'guard'  
+end
 
-# Deploy with Capistrano
-# gem 'capistrano'
+group :development do
+  gem 'bullet'
+  gem 'letter_opener'
+  gem 'hpricot'
+  gem 'ruby_parser'
+  gem 'rb-fsevent'
+  gem 'rails-footnotes', "~> 3.7.8"
+  gem 'quiet_assets'
+end
 
-# To use debugger
-# gem 'debugger'
+group :test do
+  gem 'capybara-webkit'
+  gem 'factory_girl_rails'
+  gem 'guard-livereload'
+  gem 'guard-rails'
+  gem 'guard-rspec'
+end
+
+group :production do
+  gem 'thin'
+end
+
