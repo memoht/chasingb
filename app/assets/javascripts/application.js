@@ -16,3 +16,4 @@
 //= require foundation/app
 //= require jquery.ui.datepicker
 //= require jquery.ui.autocomplete
+//= require pages
