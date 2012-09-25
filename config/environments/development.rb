@@ -34,4 +34,13 @@ Chasingb::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  #configure middleware to use exception_notifier gem
+  config.middleware.use ExceptionNotifier,
+    sender_address: 'messenger@chasingbuddhafilm.com',
+    exception_recipients: 'guillermo@brownbox.me'
+
+  config.action_mailer.default_url_options = { :host => 'chasingb.dev' }
+  config.action_mailer.delivery_method = :letter_opener
+
 end

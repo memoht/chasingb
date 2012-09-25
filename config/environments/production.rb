@@ -44,12 +44,24 @@ Chasingb::Application.configure do
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
+    config.action_controller.asset_host = "https://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
+  # The following SendGrid settings are necessary for Rails apps on Heroku Cedar stack
+  # Refer to http://devcenter.heroku.com/articles/sendgrid
+    ActionMailer::Base.smtp_settings = {
+      :address        => 'smtp.sendgrid.net',
+      :port           => '587',
+      :authentication => :plain,
+      :user_name      => ENV['SENDGRID_USERNAME'],
+      :password       => ENV['SENDGRID_PASSWORD'],
+      :domain         => 'heroku.com'
+    }
+    ActionMailer::Base.delivery_method = :smtp
 
   # Enable threaded mode
   # config.threadsafe!
@@ -64,4 +76,15 @@ Chasingb::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  #configure middleware to use exception_notifier gem
+  config.middleware.use ExceptionNotifier,
+    sender_address: 'messenger@chasingbuddhafilm.com',
+    exception_recipients: 'guillermo@brownbox.me'
+    
+  #Configure the mailer to create full URLs in emails:
+  config.action_mailer.default_url_options = { :host => 'chasingbuddhafilm.com' }
+
+  # memo: https://devcenter.heroku.com/articles/rack-cache-memcached-static-assets-rails31
+  config.static_cache_control = "public, max-age=2592000" # changed
+
 end
