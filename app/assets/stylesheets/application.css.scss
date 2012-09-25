@@ -3,16 +3,19 @@
 */
 
 /* color variables */
+$black: rgb(0,0,0);
 $brownie: rgba(57, 34, 38, 0.85);
 $brickred: rgb(160, 20, 40);
 $burgundy: rgb(167, 31, 36);
 $lightgray: rgba(24, 24, 24, 0.75);
+$orange: rgb(243, 112, 30);
 $silver: rgb(204, 204, 204);
 $snow: rgb(245, 245, 245);
 $tungsten: rgb(51, 51, 51);
 
 
 @import "foundation";
+@import "foundation_overrides";
 @import "jquery.ui.datepicker";
 @import "jquery.ui.autocomplete";
 @import "pages";
