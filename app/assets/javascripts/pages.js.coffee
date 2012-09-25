@@ -3,4 +3,4 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery(document).ready -> 
-  $("#slider").orbit()
+  $("#slider").orbit( timer: true, advanceSpeed: 6000,)
