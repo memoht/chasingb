@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_filter :authorize, :except => [:home]
+
   def about
   end
 

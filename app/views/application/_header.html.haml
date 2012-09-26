@@ -5,12 +5,18 @@
       = link_to image_tag('lgo_chasingb.png', :size => '600x120'), root_path, :alt => "Chasing Buddha Film Title", :title => "home"
   .six.columns
     %ul.nav-bar.right
-      %li
-        = link_to 'about', about_path
-      %li
-        = link_to 'contact', contact_path
-      %li
-        = link_to 'news', news_path
-      %li
-        = link_to 'synopsis', synopsis_path
+      - if signed_in?
+        %li
+          = link_to 'About', about_path
+        %li
+          = link_to 'Contact', contact_path
+        %li
+          = link_to 'News', news_path
+        %li
+          = link_to 'Synopsis', synopsis_path
+        %li
+          = link_to 'Sign out', sign_out_path, method: :delete
+      - else
+        %li
+          = link_to 'Sign in', sign_in_path
 / End Header and Nav

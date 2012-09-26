@@ -20,9 +20,12 @@
   %body{:class => body_class}
     .container
       %header
-        .row
-          = render 'header'
+        - if signed_in?
+          .row
+            = render 'header'
       .row
         = yield
-      .row
-        = render 'footer'
+      
+      - if signed_in?
+        .row
+          = render 'footer'
