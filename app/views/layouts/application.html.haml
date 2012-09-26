@@ -19,8 +19,9 @@
   / memo: refer to application_helper
   %body{:class => body_class}
     .container
-      .row
-        = render 'header'
+      %header
+        .row
+          = render 'header'
       .row
         = yield
       .row

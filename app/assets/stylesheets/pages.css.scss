@@ -6,8 +6,15 @@ body {
   color: $silver;  
 }
 
+header { margin: 30px; }
+
+footer { margin-top: 30px; }
+
 a {
   color: $brickred;
-  &:hover { color: $orange; }
+  &:hover { color: darken($silver, 40%); }
 }
+
+#logo a img { border: none; }
+
 // .container { background: $tungsten; }
