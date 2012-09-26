@@ -8,9 +8,6 @@ class PagesController < ApplicationController
   def home
   end
 
-  def news
-  end
-
   def synopsis
   end
 end
