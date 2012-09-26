@@ -33,6 +33,7 @@ GEM
     asset_sync (0.5.0)
       activemodel
       fog
+    bcrypt-ruby (3.0.1)
     builder (3.0.3)
     bullet (4.1.6)
       uniform_notifier (~> 1.0.0)
@@ -53,8 +54,9 @@ GEM
     childprocess (0.3.5)
       ffi (~> 1.0, >= 1.0.6)
     chunky_png (1.2.6)
-    clearance (0.16.3)
-      diesel (~> 0.1.5)
+    clearance (1.0.0.rc2)
+      bcrypt-ruby
+      diesel (= 0.1.5)
       rails (>= 3.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -251,7 +253,7 @@ DEPENDENCIES
   cancan
   capybara-webkit
   carrierwave
-  clearance
+  clearance (= 1.0.0.rc2)
   coffee-rails (~> 3.2.1)
   compass-rails (~> 1.0.3)
   exception_notification (~> 2.6.1)

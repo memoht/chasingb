@@ -25,7 +25,7 @@ gem 'jquery-rails'
 # Project specific gems
   gem 'carrierwave'
   gem 'cancan'
-  gem 'clearance'
+  gem 'clearance', '1.0.0.rc2'
   gem "exception_notification", '~> 2.6.1'
   gem 'ffaker'
   gem 'fog'
