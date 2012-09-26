@@ -1,0 +1,32 @@
+.row
+  .ten.columns
+    = form_for @post, :html => {:multipart => true, :class => "nice"} do |f|
+      = render 'error_messages', :object => f.object
+      .row
+        .eight.columns.centered
+          .field
+            = f.label :title
+            = f.text_field :title, :class => 'large input-text'
+          .field
+            = f.label :blurb
+            = f.text_area :blurb, { :rows => 2, :class => 'large' }
+          .field
+            = f.label :content
+            = f.text_area :content, { :rows => 10, :class => 'large', :id => 'contentmarkdown' }
+      .row
+        .four.columns.centered
+          .field
+            = f.label :author
+            = f.text_field :author, :class => 'input-text'
+          .field
+            = f.label :publish_date
+            = f.text_field :publish_date, :class => 'input-text', :id => 'calendar'
+          .field
+            = f.label :published
+            = f.check_box :published
+
+        %hr
+        .row
+          .six.columns
+            = f.submit 'save', :class => 'button radius'
+            = link_to 'cancel', :back, :class => 'button radius'

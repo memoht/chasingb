@@ -8,7 +8,7 @@ Chasingb::Application.routes.draw do
 
   match '/about',      :to => 'pages#about'
   match '/contact',    :to => 'pages#contact'
-  match '/news',       :to => 'pages#news'
+  match '/news',       :to => 'posts#index'
   match '/synopsis',   :to => 'pages#synopsis'
 
   # Sample of regular route:
