@@ -6,13 +6,13 @@
         .eight.columns.centered
           .field
             = f.label :title
-            = f.text_field :title, :class => 'large input-text'
+            = f.text_field :title, { :class => 'large input-text', :id => 'brandname', :placeholder => 'enter a title article' }
           .field
             = f.label :blurb
-            = f.text_area :blurb, { :rows => 2, :class => 'large' }
+            = f.text_area :blurb, { :rows => 3, :placeholder => 'blurb is a brief sentence to go under news item title.' }
           .field
             = f.label :content
-            = f.text_area :content, { :rows => 10, :class => 'large', :id => 'contentmarkdown' }
+            = f.text_area :content, { :rows => 10, :class => 'large', :id => 'contentmarkdown', :placeholder => 'the content goes here, limit of 9000 characters' }
       .row
         .four.columns.centered
           .field
@@ -28,5 +28,5 @@
         %hr
         .row
           .six.columns
-            = f.submit 'save', :class => 'button radius'
-            = link_to 'cancel', :back, :class => 'button radius'
+            = f.submit 'save', :class => 'submit button'
+            = link_to 'cancel', :back, :class => 'secondary button'
