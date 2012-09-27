@@ -8,6 +8,7 @@ Chasingb::Application.routes.draw do
 
   match '/about',      :to => 'pages#about'
   match '/contact',    :to => 'pages#contact'
+  match '/dashboard',  :to => 'pages#dashboard'
   match '/news',       :to => 'posts#index'
   match '/synopsis',   :to => 'pages#synopsis'
 

@@ -7,6 +7,10 @@ class PagesController < ApplicationController
   def contact
   end
 
+  def dashboard
+  @title = 'Site Dashboard'
+  end
+
   def home
   end
 
