@@ -32,6 +32,8 @@ gem 'jquery-rails'
   gem 'haml'
   gem 'haml-rails'
   gem 'pacecar'
+  gem 'redcarpet'
+
 
 
 # RSpec needs to be in :development group to expose generators
