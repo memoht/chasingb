@@ -1,0 +1,12 @@
+.row
+  .ten.columns.centered
+    %h3.title= @post.title
+    %h6
+      by
+      %b= @post.author
+      |
+      = @post.publish_date
+    %hr
+
+    %p
+      = markdown.render(h @post.content).html_safe
