@@ -7,6 +7,11 @@
     %ul.nav-bar.right
       - if signed_in?
         %li
+          = link_to 'Dashboard', dashboard_path
+        %li
+          = link_to 'Sign out', sign_out_path, method: :delete
+      - else
+        %li
           = link_to 'About', about_path
         %li
           = link_to 'Contact', contact_path
@@ -14,9 +19,4 @@
           = link_to 'News', news_path
         %li
           = link_to 'Synopsis', synopsis_path
-        %li
-          = link_to 'Sign out', sign_out_path, method: :delete
-      - else
-        %li
-          = link_to 'Sign in', sign_in_path
 / End Header and Nav
