@@ -1,0 +1,7 @@
+.row
+  .six.columns.centered
+    %h2 Sign in
+    = render :partial => '/sessions/form'
+    %ul
+      %li
+        = link_to 'Forgot password?', new_password_path
