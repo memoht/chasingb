@@ -120,4 +120,11 @@ label {
   color: $silver;
 }
 
+h4, h5, h6 { margin-bottom: 8px; margin-top: 10px; }
+
+hr {
+  border: solid $tungsten;
+  border-width: 1px 0 0;
+}
+
 // @import 'foundation';
