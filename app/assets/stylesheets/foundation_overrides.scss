@@ -116,4 +116,8 @@
   &:hover { color: darken($silver, 40%); }
 }
 
+label {
+  color: $silver;
+}
+
 // @import 'foundation';
