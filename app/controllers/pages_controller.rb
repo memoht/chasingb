@@ -8,7 +8,6 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-  @title = 'Site Dashboard'
   end
 
   def home
