@@ -15,6 +15,7 @@
 //= require foundation
 //= require foundation/app
 //= require jquery.ui.datepicker
-//= require jquery.ui.autocomplete
 //= require pages
 //= require posts
+//= require markitup
+//= require set
