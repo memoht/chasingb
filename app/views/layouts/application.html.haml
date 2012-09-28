@@ -10,7 +10,7 @@
     %meta{:charset => "utf-8"}
     / Set the viewport width to device width for mobile
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %title= content_for?(:title) ? yield(:title) : "Chasing Buddha, a film by Amiel Courtin-Wilson"
+    %title= full_title(yield(:title))
     / Included CSS Files
     = stylesheet_link_tag    "application"
     / Included JS Files
