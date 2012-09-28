@@ -116,6 +116,11 @@
   &:hover { color: darken($silver, 40%); }
 }
 
+.reveal-modal {
+background: $silver;
+  h5, h6 { color: $tungsten; }
+}
+
 label {
   color: $silver;
 }
