@@ -1,2 +1,12 @@
-%h1 Pages#contact
-%p Find me in app/views/pages/contact.html.haml
+- provide(:title, 'Contact Information')
+
+.row
+  .four.columns.offset-by-two
+    = image_tag("tmb_robina.jpg", :alt => 'Image of Ven. Robina Courtin')
+    %h4 Ven. Robina Courtin
+    %h5= mail_to 'info@chasingbuddhafilm.com', "info@chasingbuddhafilm.com", :encode => "javascript", :subject => "Contact from Chasingbuddhafilm.com site", :title => "Send an email from your computer."
+
+  .four.columns.offset-by-one.end
+    = image_tag("tmb_amiel.jpg", :alt => 'Image of Amiel Courtin-Wilson')
+    %h4 Amiel Courtin-Wilson
+    %h5= mail_to 'amiel@floodprojects.com', "amiel@floodprojects.com", :encode => "javascript", :subject => "Contact from Chasingbuddhafilm.com site", :title => "Send an email from your computer."
