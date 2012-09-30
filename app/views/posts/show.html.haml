@@ -1,3 +1,11 @@
+- if signed_in?
+  .row
+    .three.columns.offset-by-nine
+      = link_to 'edit', edit_post_path(@post), :class => 'small button secondary'
+      = link_to 'delete', @post, :data => { :confirm => 'Are you sure?' }, :method => :delete, :title => 'Hasta la vista baby', :class => 'small button alert'
+  %hr
+  
+
 .row
   .ten.columns.centered
     %h3.title= @post.title
