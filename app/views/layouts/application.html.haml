@@ -16,6 +16,9 @@
     / Included JS Files
     = javascript_include_tag "application"
     = csrf_meta_tags
+    - unless Rails.env.development?
+      = render 'analytics'
+
   / memo: refer to application_helper
   %body{:class => body_class}
     .container
@@ -25,7 +28,7 @@
             = render 'header'
       .row
         = yield
-      
+
       - if signed_in?
         .row
           = render 'footer'
