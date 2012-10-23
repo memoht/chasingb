@@ -4,6 +4,9 @@ class PagesController < ApplicationController
   def about
   end
 
+  def buy
+  end
+
   def contact
   end
 
@@ -13,6 +16,4 @@ class PagesController < ApplicationController
   def home
   end
 
-  def synopsis
-  end
 end

@@ -7,10 +7,10 @@ Chasingb::Application.routes.draw do
   root :to => "pages#home"
 
   match '/about',      :to => 'pages#about'
+  match '/buy',        :to => 'pages#buy'
   match '/contact',    :to => 'pages#contact'
   match '/dashboard',  :to => 'pages#dashboard'
   match '/news',       :to => 'posts#index'
-  match '/synopsis',   :to => 'pages#synopsis'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
