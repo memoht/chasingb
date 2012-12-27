@@ -16,8 +16,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'jquery-ui-rails'
   gem 'asset_sync'
-  gem 'compass-rails', '~> 1.0.3'
-  gem 'zurb-foundation', '~> 3.0.9'
+  gem 'compass-rails'
+  gem 'zurb-foundation'
 end
 
 gem 'jquery-rails'
@@ -45,12 +45,13 @@ group :development, :test do
 end
 
 group :development do
+  gem 'better_errors'
   gem 'bullet'
   gem 'letter_opener'
   gem 'hpricot'
   gem 'ruby_parser'
   gem 'rb-fsevent'
-  gem 'rails-footnotes', "~> 3.7.8"
+  gem 'rails-footnotes', "~> 3.7.9"
   gem 'quiet_assets'
 end
 
