@@ -1,10 +1,7 @@
 source 'https://rubygems.org'
+ruby '1.9.3'
 
-gem 'rails', '3.2.9'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'rails', '3.2.10'
 gem 'pg'
 
 
@@ -26,7 +23,7 @@ gem 'jquery-rails'
   gem 'carrierwave'
   gem 'cancan'
   gem 'clearance', '1.0.0.rc2'
-  gem "exception_notification", '~> 2.6.1'
+  gem 'exception_notification'
   gem 'ffaker'
   gem 'fog'
   gem 'haml'
