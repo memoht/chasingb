@@ -21,14 +21,13 @@
 
   / memo: refer to application_helper
   %body{:class => body_class}
-    .container
-      %header
-        - if signed_in?
-          .row
-            = render 'header'
-      .row
-        = yield
-
+    %header
       - if signed_in?
         .row
-          = render 'footer'
+          = render 'header'
+    .row
+      = yield
+
+    - if signed_in?
+      .row
+        = render 'footer'

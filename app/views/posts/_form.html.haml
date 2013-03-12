@@ -1,26 +1,24 @@
 .row
   .ten.columns
-    = form_for @post, :html => {:multipart => true, :class => "nice"} do |f|
-      = render 'error_messages', :object => f.object
+    = form_for(@post) do |f|
+      = render 'error_messages', object: f.object
       .row
-        .eight.columns.centered
+        .eight.columns
           .field
             = f.label :title
-            = f.text_field :title, { :class => 'large input-text', :id => 'brandname', :placeholder => 'enter a title article' }
+            = f.text_field :title, { id: 'brandname', placeholder: 'enter a title article' }
           .field
             = f.label :blurb
-            = f.text_area :blurb, { :rows => 3, :placeholder => 'blurb is a brief sentence to go under news item title.' }
+            = f.text_area :blurb, { rows: 3, placeholder: 'blurb is a brief sentence to go under news item title.' }
           .field
             = f.label :content
-            = f.text_area :content, { :rows => 10, :class => 'large', :id => 'contentmarkdown', :placeholder => 'this text field uses markdown to help format  your content' }
-      .row
-        .four.columns.centered
+            = f.text_area :content, { rows: 10, id: 'contentmarkdown', placeholder: 'this text field uses markdown to help format  your content' }
           .field
             = f.label :author
-            = f.text_field :author, :class => 'input-text'
+            = f.text_field :author
           .field
             = f.label :publish_date
-            = f.text_field :publish_date, :class => 'input-text', :id => 'calendar'
+            = f.text_field :publish_date, id: 'calendar'
           .field
             = f.label :published
             = f.check_box :published
@@ -28,5 +26,5 @@
         %hr
         .row
           .six.columns
-            = f.submit 'save', :class => 'submit button'
-            = link_to 'cancel', :back, :class => 'secondary button'
+            = f.submit 'save', class: 'secondary button'
+            = link_to 'cancel', :back, class: 'alert button'
