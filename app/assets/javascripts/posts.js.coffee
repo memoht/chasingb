@@ -1,5 +1,5 @@
-jQuery(document).ready -> 
-  $('#calendar').datepicker({ changeMonth: true, changeYear: true, showButtonPanel: true, dateFormat: 'yy-mm-dd' })
+jQuery ->
+    picker = new Pikaday(field: $("#calendar")[0])
 
 $ ->
   $("#contentmarkdown").markItUp mySettings

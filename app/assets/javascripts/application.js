@@ -14,7 +14,8 @@
 //= require jquery_ujs
 //= require foundation
 //= require foundation/app
-//= require jquery.ui.datepicker
+//= require moment
+//= require pikaday
 //= require pages
 //= require posts
 //= require markitup
