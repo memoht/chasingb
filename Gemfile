@@ -31,33 +31,38 @@ gem 'jquery-rails'
   gem 'redcarpet', '~> 2.2'
 
 
-
 # RSpec needs to be in :development group to expose generators
 # and rake tasks without having to type RAILS_ENV=test.
 group :development, :test do
-  gem 'rspec-rails', '~> 2.12'
+  gem 'factory_girl_rails', '~> 4.2'
+  gem 'guard-rspec', '~> 2.5'
+  gem 'rspec-rails', '~> 2.13'
   gem 'ruby_gntp'
-  gem 'guard', '~> 1.6'
+  gem 'shoulda'
 end
 
 group :development do
-  gem 'better_errors', '>= 0.5'
-  gem 'bullet', '~> 4.3'
+  gem 'better_errors', '>= 0.7'
+  gem 'binding_of_caller'
+  gem 'brakeman', '~> 1.9.3'
+  gem 'bullet', '~> 4.4'
+  gem 'guard-livereload', '~> 1.1'
   gem 'letter_opener', '>= 1.1'
-  gem 'rb-fsevent'
   gem 'rails-footnotes', "~> 3.7.9"
   gem 'quiet_assets', '~> 1.0'
+  gem 'sextant', '~> 0.2'
 end
 
 group :test do
   gem 'capybara', '~> 2.0'
-  gem 'factory_girl_rails', '~> 4.2'
-  gem 'guard-livereload', '~> 1.1'
-  gem 'guard-rails', '>= 0.2'
-  gem 'guard-rspec', '~> 2.4'
+  gem 'database_cleaner', '~> 0.9.1'
+  gem 'ffaker', '~> 1.15'
+  gem 'launchy', '~> 2.2.0'
+  gem 'rb-fsevent'
+  gem 'simplecov', require: false
 end
 
 group :production do
-  gem 'thin', '~> 1.5.0'
+  gem 'unicorn', '~> 4.6.2'
 end
 
