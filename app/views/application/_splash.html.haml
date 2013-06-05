@@ -2,10 +2,3 @@
   .six.columns.centered
     = image_tag("img_splash.png")
   %hr
-  - if signed_in?
-    %li
-    = link_to 'Sign out', sign_out_path, method: :delete
-  - else
-    %ul.nav-bar.right
-      %li
-        = link_to 'Sign in', sign_in_path
