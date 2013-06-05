@@ -13,10 +13,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'asset_sync', '~> 0.5'
   gem 'compass-rails'
-  gem 'zurb-foundation', '~> 3.2'
+  gem 'zurb-foundation', '~> 3.2.5'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 3.0.0'
 
 # Project specific gems
   gem 'carrierwave', '~> 0.8'
@@ -24,11 +24,11 @@ gem 'jquery-rails'
   gem 'clearance', '1.0.0.rc4'
   gem 'exception_notification', '~> 3.0'
   gem 'ffaker', '~> 1.15'
-  gem 'fog', '~> 1.9.0'
+  gem 'fog', '~> 1.11.1'
   gem 'haml', '~> 4.0.0'
   gem 'haml-rails', '~> 0.4'
   gem 'pacecar', '~> 1.5'
-  gem 'redcarpet', '~> 2.2'
+  gem 'redcarpet', '~> 2.3'
 
 
 # RSpec needs to be in :development group to expose generators
@@ -44,9 +44,8 @@ end
 group :development do
   gem 'better_errors', '>= 0.7'
   gem 'binding_of_caller'
-  gem 'brakeman', '~> 1.9.3'
-  gem 'bullet', '~> 4.4'
-  gem 'guard-livereload', '~> 1.1'
+  gem 'brakeman', '~> 2.0.0'
+  gem 'bullet', '~> 4.6.0'
   gem 'letter_opener', '>= 1.1'
   gem 'rails-footnotes', "~> 3.7.9"
   gem 'quiet_assets', '~> 1.0'
