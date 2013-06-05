@@ -5,7 +5,7 @@
       %hr
       .row
         .six.columns
-          %p &copy; Chasing Buddha, a film by Amiel-Courtin Wilson
+          %p &copy; #{Date.today.strftime("%Y")} Chasing Buddha, a film by Amiel-Courtin Wilson
         .six.columns
           %ul.link-list.right
             %li
@@ -15,4 +15,4 @@
             %li
               = link_to 'news', news_path
             %li
-              = link_to 'buy', buy_path, :title => 'Buy the Chasing Buddha DVD Today!'
+              = link_to 'buy now', buy_path, title: 'Buy the Chasing Buddha DVD Today!', class: 'button radius small'
