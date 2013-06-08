@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+ruby '2.0.0'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 gem 'pg'
 
 
@@ -16,7 +16,7 @@ group :assets do
   gem 'zurb-foundation', '~> 3.2.5'
 end
 
-gem 'jquery-rails', '~> 3.0.0'
+gem 'jquery-rails', '~> 3.0.1'
 
 # Project specific gems
   gem 'carrierwave', '~> 0.8'
@@ -35,7 +35,7 @@ gem 'jquery-rails', '~> 3.0.0'
 # and rake tasks without having to type RAILS_ENV=test.
 group :development, :test do
   gem 'factory_girl_rails', '~> 4.2'
-  gem 'guard-rspec', '~> 2.5'
+  gem 'guard-rspec', '~> 3.0.0'
   gem 'rspec-rails', '~> 2.13'
   gem 'ruby_gntp'
   gem 'shoulda'
