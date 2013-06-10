@@ -1,9 +1,9 @@
 - if signed_in?
   .row
-    .three.columns.offset-by-nine
+    .ten.columns.centered
       = link_to 'edit', edit_post_path(@post), :class => 'small button secondary'
       = link_to 'delete', @post, :data => { :confirm => 'Are you sure?' }, :method => :delete, :title => 'Hasta la vista baby', :class => 'small button alert'
-  %hr
+      %hr
   
 
 .row
