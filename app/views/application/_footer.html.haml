@@ -3,16 +3,23 @@
   .row
     .twelve.columns
       %hr
-      .row
-        .six.columns
-          %p &copy; #{Date.today.strftime("%Y")} Chasing Buddha, a film by Amiel-Courtin Wilson
-        .six.columns
-          %ul.link-list.right
-            %li
-              = link_to 'about', about_path
-            %li
-              = link_to 'contact', contact_path
-            %li
-              = link_to 'press', press_path
-            %li
-              = link_to 'buy now', buy_path, title: 'Buy the Chasing Buddha DVD Today!', class: 'button radius small'
+      %dl.sub-nav
+        %dd{class: current_page?(buy_path) ? "active" : ""}
+          %strong= link_to 'buy now', buy_path, title: 'Buy the Chasing Buddha DVD Today!'
+        
+        %dd{class: current_page?(about_path) ? "active" : "inactive"}
+          = link_to 'about', about_path
+
+        %dd{class: current_page?(amiel_path) ? "active" : "inactive"}
+          = link_to 'amiel', amiel_path
+
+        %dd{class: current_page?(robina_path) ? "active" : "inactive"}
+          = link_to 'robina', robina_path
+
+        %dd{class: current_page?(press_path) ? "active" : "inactive"}
+          = link_to 'press', press_path
+
+        /%dd{class: current_page?(contact_path) ? "active" : "inactive"}
+        / = link_to 'contact', contact_path
+
+        %dd= mail_to 'info@chasingbuddhafilm.com', "contact", :encode => "javascript", :subject => "Contact from Chasingbuddhafilm.com site", :title => "Send an email from your computer."
