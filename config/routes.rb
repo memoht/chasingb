@@ -1,14 +1,12 @@
 Chasingb::Application.routes.draw do
+  
+  # memo: http://railscasts.com/episodes/117-semi-static-pages-revised
+  %w[about amiel buy contact dashboard robina].each do |page|
+    get page, controller: 'pages', action: page
+  end
 
   resources :posts
   resources :quotes, except: [:show]
-
-  root :to => "pages#home"
-
-  match '/about',      :to => 'pages#about'
-  match '/buy',        :to => 'pages#buy'
-  match '/contact',    :to => 'pages#contact'
-  match '/dashboard',  :to => 'pages#dashboard'
-  match '/press',       :to => 'posts#index'
-
+  match '/press', to: 'posts#index'
+  root to: "pages#home"
 end

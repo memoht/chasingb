@@ -1,7 +1,10 @@
 class PagesController < ApplicationController
-  before_filter :authorize, :except => [:home]
+  before_filter :authorize, except: [:home]
 
   def about
+  end
+
+  def amiel
   end
 
   def buy
@@ -9,11 +12,14 @@ class PagesController < ApplicationController
 
   def contact
   end
-
+  
   def dashboard
   end
 
   def home
+  end
+
+  def robina
   end
 
 end
