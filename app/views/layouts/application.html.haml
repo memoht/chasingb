@@ -23,11 +23,10 @@
   %body{:class => body_class}
     %header
       - if signed_in?
-        .row
-          = render 'header'
+        = render 'header'
+ 
     .row
       = yield
 
     - if signed_in?
-      .row
-        = render 'footer'
+      = render 'footer'
