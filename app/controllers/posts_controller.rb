@@ -1,10 +1,14 @@
 class PostsController < ApplicationController
   before_filter :authorize, :except => [:index, :show]
   
-  respond_to :html, :json
+  respond_to :html
 
   def index
-    @posts = Post.published
+    if signed_in?
+      @posts = Post.all
+    else
+      @posts = Post.published
+    end
     respond_with @posts
   end
   
