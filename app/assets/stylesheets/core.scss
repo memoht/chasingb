@@ -51,3 +51,10 @@ hr {
   border: solid $tungsten;
   border-width: 1px 0 0;
 }
+
+ul.breadcrumbs {
+  background: #000000;
+  border: 1px solid #333333;
+}
+
+dt, dd { font-size: 16px; }
