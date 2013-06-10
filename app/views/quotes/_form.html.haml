@@ -1,0 +1,13 @@
+.row
+  .eight.columns.end
+    = form_for(@quote) do |f|
+      = render 'error_messages', object: f.object
+      .field
+        = f.label :content
+        = f.text_area :content, { rows: 4, placeholder: 'enter the text for the quote, up to 255 characters max' }
+      .field
+        = f.label :author
+        = f.text_field :author, { placeholder: 'author name' }
+      %hr
+      = f.submit 'save', class: 'secondary button'
+      = link_to 'cancel', :back, class: 'alert button'
