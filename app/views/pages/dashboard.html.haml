@@ -1,5 +1,13 @@
 - provide(:title, 'Dashboard')
 
 .row
-  .twelve.columns
-    = link_to 'New Post', new_post_path, :class => "secondary button"
+  %h4.subheader Create
+  %ul.block-grid.four-up
+    %li= link_to 'New Post', new_post_path, class: "success button"
+    %li= link_to 'New Quote', new_quote_path, class: "success button"
+
+.row
+  %h4.subheader Manage
+  %ul.block-grid.four-up
+    %li= link_to 'All Posts', posts_path, class: "secondary button"
+    %li= link_to 'All Quotes', quotes_path, class: "secondary button"
