@@ -1,8 +1,7 @@
-/ Footer
 %footer
   .row
     %hr
-    .five.columns.centered
+    .ten.columns.centered
       %dl.sub-nav
         %dd{class: current_page?(buy_path) ? "active" : ""}
           %strong= link_to 'buy now', buy_path, title: 'Buy the Chasing Buddha DVD Today!'
@@ -19,7 +18,5 @@
         %dd{class: current_page?(press_path) ? "active" : "inactive"}
           = link_to 'press', press_path
 
-        /%dd{class: current_page?(contact_path) ? "active" : "inactive"}
-        / = link_to 'contact', contact_path
-
-        %dd= mail_to 'info@chasingbuddhafilm.com', "contact", :encode => "javascript", :subject => "Contact from Chasingbuddhafilm.com site", :title => "Send an email from your computer."
+        %dd{class: current_page?(contact_path) ? "active" : "inactive"}
+          = link_to 'contact', contact_path
