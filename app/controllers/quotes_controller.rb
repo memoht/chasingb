@@ -20,7 +20,7 @@ class QuotesController < ApplicationController
   def create
     @quote = Quote.new(params[:quote])
     if @quote.save
-      redirect_to @quote, notice: 'Quote was successfully created.'
+      redirect_to quotes_url, notice: 'Quote was successfully created.'
     else
       render :new
     end
