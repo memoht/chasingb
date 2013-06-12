@@ -1,8 +1,4 @@
 .row
-  .eight.columns
-    %p= quote.content
-    %h5= quote.author    
-  .three.columns.offset-by-one
-    = link_to 'edit', edit_quote_path(quote), class: 'small button secondary'
-    = link_to 'delete', quote, method: :delete, data: { confirm: 'Are you sure?' }, class: 'small button alert', title: 'Hasta la vista baby'
-%hr
+  .ten.columns.offset-by-one.end
+    %strong= quote.content
+    %cite= "- " + quote.author 
