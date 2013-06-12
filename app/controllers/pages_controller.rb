@@ -17,6 +17,7 @@ class PagesController < ApplicationController
   end
 
   def home
+    @quote = Quote.all.sample
   end
 
   def robina
