@@ -2,10 +2,13 @@
   .row
     .seven.columns.offset-by-one
       .flex-video.widescreen.vimeo
-        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => "http://www.youtube.com/embed/KZjLi78JcxE", :width => "560"}
-      = image_tag("img_credits.png", :alt => "Credits for Chasing Buddha Film")
-    .two.columns.end
-      = image_tag("img_awards.png", :size => "200x400", :alt => "Awards for Chasing Buddha Film")
+        %iframe{allowfullscreen: "", frameborder: "0", height: "315", src: "http://www.youtube.com/embed/KZjLi78JcxE", width: "560"}
+      = image_tag("img_credits.png" , size: "560x100", alt: "Credits for Chasing Buddha Film")
+    .three.columns.end
+      = image_tag("img_awards.png", size: "200x400", alt: "Awards for Chasing Buddha Film")
 
 - else
-  = render 'splash'
+  .row
+    .eight.columns.centered
+      = image_tag("img_splash.png")
+  %hr
