@@ -1,21 +1,24 @@
 %dl.sub-nav
-  %dd{class: current_page?(buy_path) ? "active" : ""}
-    = link_to 'buy now', buy_path, title: 'Buy the Chasing Buddha DVD Today!'
-  
   %dd{class: current_page?(about_path) ? "active" : "inactive"}
     = link_to 'about', about_path
+
+  %dd{class: current_page?(robina_path) ? "active" : "inactive"}
+    = link_to 'robina', robina_path
 
   %dd{class: current_page?(amiel_path) ? "active" : "inactive"}
     = link_to 'amiel', amiel_path
 
-  %dd{class: current_page?(robina_path) ? "active" : "inactive"}
-    = link_to 'robina', robina_path
+  %dd{class: current_page?(root_path) ? "active" : "inactive"}
+    = link_to 'trailer', root_path
 
   %dd{class: current_page?(press_path) ? "active" : "inactive"}
     = link_to 'press', press_path
 
   %dd{class: current_page?(contact_path) ? "active" : "inactive"}
     = link_to 'contact', contact_path
+
+  %dd{class: current_page?(buy_path) ? "active" : ""}
+    = link_to 'buy now', buy_path, title: 'Buy the Chasing Buddha DVD Today!'
 
   - if signed_in?
     %dd{class: current_page?(dashboard_path) ? "active" : "inactive"}
