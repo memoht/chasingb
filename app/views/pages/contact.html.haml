@@ -1,13 +1,18 @@
 - provide(:title, 'Contact Information')
 
+/ The Orbit slider is initialized by calling .orbit() on #slider
 .row
-  .four.columns.offset-by-two
-    = image_tag("tmb_robina.jpg", :alt => 'Image of Ven. Robina Courtin')
-    %h4 Ven. Robina Courtin
-    %h5= link_to 'robinacourtin.com', "http://www.robinacourtin.com", target: "_blank"
-    %h5= mail_to 'info@chasingbuddhafilm.com', "info@chasingbuddhafilm.com", :encode => "javascript", :subject => "Contact from Chasingbuddhafilm.com site", :title => "Send an email from your computer."
+  .ten.columns.centered
+    #slider
+      = image_tag ("about_02.jpg")
+      = image_tag ("about_03.jpg")      
+      = image_tag ("about_01.jpg")
+    %hr
 
-  .four.columns.offset-by-one.end
-    = image_tag("tmb_amiel.jpg", :alt => 'Image of Amiel Courtin-Wilson')
-    %h4 Amiel Courtin-Wilson
-    %h5= mail_to 'amiel@floodprojects.com', "amiel@floodprojects.com", :encode => "javascript", :subject => "Contact from Chasingbuddhafilm.com site", :title => "Send an email from your computer."
+.row
+  .ten.columns.offset-by-one.end
+    %h4
+      Please contact Kate Macdonald at 
+      = mail_to 'info@chasingbuddhafilm.com', "info@chasingbuddhafilm.com", :encode => "javascript", :subject => "Contact from Chasingbuddhafilm.com site", :title => "Send an email from your computer."
+    %h5= link_to 'robinacourtin.com', "http://www.robinacourtin.com", target: "_blank"
+    %h5= link_to 'floodprojects.com', "http://www.floodprojects.com", target: "_blank"
