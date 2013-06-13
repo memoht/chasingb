@@ -20,6 +20,10 @@ class PagesController < ApplicationController
     @quote = Quote.all.sample
   end
 
+  def praise
+    @quotes = Quote.all
+  end
+  
   def robina
   end
 

@@ -1,7 +1,7 @@
 Chasingb::Application.routes.draw do
   
   # memo: http://railscasts.com/episodes/117-semi-static-pages-revised
-  %w[about amiel buy contact dashboard robina].each do |page|
+  %w[about amiel buy contact dashboard praise robina].each do |page|
     get page, controller: 'pages', action: page
   end
 

@@ -1,4 +1,7 @@
 %dl.sub-nav
+  %dd{class: current_page?(root_path) ? "active" : "inactive"}
+    = link_to 'trailer', root_path
+
   %dd{class: current_page?(about_path) ? "active" : "inactive"}
     = link_to 'about', about_path
 
@@ -10,6 +13,9 @@
 
   %dd{class: current_page?(press_path) ? "active" : "inactive"}
     = link_to 'press', press_path
+
+  %dd{class: current_page?(praise_path) ? "active" : "inactive"}
+    = link_to 'praise', praise_path
 
   %dd{class: current_page?(contact_path) ? "active" : "inactive"}
     = link_to 'contact', contact_path
