@@ -1,4 +1,8 @@
-.row
-  .ten.columns.offset-by-one.end
-    %strong= quote.content
-    %cite= "- " + quote.author 
+%strong
+  %quote
+    ''
+  = quote.content
+  ''
+%br
+%cite= "- " + quote.author
+%hr
