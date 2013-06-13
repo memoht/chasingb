@@ -29,7 +29,7 @@ class QuotesController < ApplicationController
   def update
     @quote = Quote.find(params[:id])
     if @quote.update_attributes(params[:quote])
-      redirect_to @quote, notice: 'Quote was successfully updated.'
+      redirect_to quotes_url, notice: 'Quote was successfully updated.'
     else
       render :edit
     end
