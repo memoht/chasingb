@@ -1,4 +1,6 @@
 - provide(:title, 'Praise')
 .row
-  .ten.columns.centered
-    = render @quotes || 'no praise'
+  .five.columns.offset-by-one
+    = render @evens || 'no praise'
+  .five.columns.end
+    = render @odds || 'no praise'

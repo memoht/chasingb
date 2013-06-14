@@ -21,7 +21,8 @@ class PagesController < ApplicationController
   end
 
   def praise
-    @quotes = Quote.all
+    @evens = Quote.even
+    @odds = Quote.odd
   end
   
   def robina
