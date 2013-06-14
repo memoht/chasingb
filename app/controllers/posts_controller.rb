@@ -1,21 +1,15 @@
 class PostsController < ApplicationController
   before_filter :authorize, except: [:index, :show]
-  
-  respond_to :html
 
   def index
-    if signed_in?
       @posts = Post.all
-    else
-      @posts = Post.published
-    end
-    respond_with @posts
+      @odds = Post.odd
+      @evens = Post.even
   end
   
   def show
     @post = Post.find(params[:id])
     @title = 'Posts | ' + @post.title
-    respond_with @post
   end
   
   def new

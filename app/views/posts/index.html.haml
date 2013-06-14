@@ -9,8 +9,8 @@
       = image_tag ("about_05.jpg")     
       = image_tag ("amiel_01.jpg")      
       = image_tag ("amiel_05.jpg")
-
-- unless @posts.nil?
-  .row
-    .ten.columns.centered
-      = render @posts
+.row
+  .five.columns.offset-by-one
+    = render @evens || 'no posts'
+  .five.columns.end
+    = render @odds || 'no posts'
