@@ -1,5 +1,3 @@
-.row
-  .ten.columns.centered
-    %h5= link_to post.title, post, :alt => "#{post.title} | by #{post.author}", :title => post.title       
-
-    %p= post.blurb
+%h5= link_to post.title, post, :alt => "#{post.title} | by #{post.author}", :title => post.title       
+= post.blurb
+%hr

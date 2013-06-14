@@ -60,14 +60,18 @@ ul.breadcrumbs {
 dt, dd { font-size: 16px; font-weight: bold; }
 
 #navbox { padding-top: 40px; }
-#quotebox { padding: 10px 0px; font-size: 18px; }
+#quotebox { 
+  padding: 10px 0px; 
+  font-size: 16px; 
+  line-height: 1.5;
+}
 cite { color: $brickred; }
 
 
 /* Graceful loading state for Orbit http://foundation.zurb.com/old-docs/f3/orbit.php  */
 
-#slider { background: url(spinner.gif) center center #f4f4f4 no-repeat; height: 300px; }
+#slider { background-image: url("spinner.gif") center center #000000 no-repeat; height: 300px;  }
 #slider img { display: none; }
 
-#slider.orbit { background: none; }
+#slider.orbit { background: none;  padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid $tungsten;}
 #slider.orbit img { display: block; }

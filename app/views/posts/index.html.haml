@@ -9,9 +9,8 @@
       = image_tag ("about_05.jpg")     
       = image_tag ("amiel_01.jpg")      
       = image_tag ("amiel_05.jpg")
-    %hr
 
 - unless @posts.nil?
   .row
-    .twelve.columns
+    .ten.columns.centered
       = render @posts
