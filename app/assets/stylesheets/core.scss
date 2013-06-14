@@ -70,7 +70,7 @@ cite { color: $brickred; }
 
 /* Graceful loading state for Orbit http://foundation.zurb.com/old-docs/f3/orbit.php  */
 
-#slider { background-image: url("spinner.gif") center center #000000 no-repeat; height: 300px;  }
+#slider { background-image: url("loading.gif") center center #000000 no-repeat; height: 300px;  }
 #slider img { display: none; }
 
 #slider.orbit { background: none;  padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid $tungsten;}
