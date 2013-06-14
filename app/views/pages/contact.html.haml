@@ -11,10 +11,13 @@
       = image_tag ("amiel_04.jpg")
 
 .row
-  .ten.columns.offset-by-one.end
-    %h4
-      Please contact Kate Macdonald at 
+  .three.columns.offset-by-one
+    = image_tag('dvd_cover.png', size: "211x300", alt: "DVD cover for Chasing Buddha Film")
+  .seven.columns.end
+    .panel.callout
+      Questions? Contact Kate Macdonald at:  
       = mail_to 'info@chasingbuddhafilm.com', "info@chasingbuddhafilm.com", :encode => "javascript", :subject => "Contact from Chasingbuddhafilm.com site", :title => "Send an email from your computer."
-    %h5= link_to 'robinacourtin.com', "http://www.robinacourtin.com", target: "_blank"
-    %h5= link_to 'fpmt.org', "http://www.fpmt.org", target: "_blank"
-    %h5= link_to 'floodprojects.com', "http://www.floodprojects.com", target: "_blank"
+    
+    %h4= link_to 'robinacourtin.com', "http://www.robinacourtin.com", target: "_blank"
+    %h4= link_to 'fpmt.org', "http://www.fpmt.org", target: "_blank"
+    %h4= link_to 'floodprojects.com', "http://www.floodprojects.com", target: "_blank"
