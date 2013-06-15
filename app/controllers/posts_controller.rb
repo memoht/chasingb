@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_filter :authorize, except: [:index, :show]
-
+ 
   def index
       @posts = Post.all
       @odds = Post.odd
@@ -14,7 +14,6 @@ class PostsController < ApplicationController
   
   def new
     @post = Post.new
-    respond_with @post
   end
   
   def edit
