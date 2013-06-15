@@ -1,20 +1,18 @@
 .row
-  .five.columns.offset-by-one
+  .three.columns.offset-by-one
     = image_tag('dvd_cover.png', size: "211x300", alt: "DVD cover for Chasing Buddha Film")
     %br
+  .six.columns.end
     %h4 Price: USD33.00
     %i (including shipping and handling)
-
     %p
       %strong You will be charged the equivalent in your own currency on the day of transaction. Approximately:
-    %h6 AUSTRALIA: $35
-    %h6 EUROPE: &#8364; 25
-    %h6 UK: £21
-    %h6 USA: $33
+    %h6 AUSTRALIA: $35  • EUROPE: &#8364; 25  • UK: £21  • USA: $33
 
     %p
       Amiel is kindly offering 50% of all profits from the sale of Chasing Buddha DVD to Robina's Bodhichitta Trust in California, USA, which supports the work of her teachers, Lama Yeshe and Lama Zopa Rinpoche.
       %strong The Bodhcihitta Trust is handling all sales of Chasing Buddha.
-
-  .five.columns.end
+.row
+  .ten.columns.end
+    %hr
     = render 'order_form'
