@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :authorize, except: [:home]
+  before_filter :authorize, only: [:dashboard]
 
   def about
   end

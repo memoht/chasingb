@@ -22,8 +22,6 @@
   / memo: refer to application_helper
   %body{:class => body_class}
     %header
-      = render 'header' if signed_in?
+      = render 'header'
  
     = yield
-
-    /= render 'footer' if signed_in?
