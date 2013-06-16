@@ -1,41 +1,3 @@
-.nav-bar {
-  background: $black;
-  padding: 0;
-  
-  li, li:last-child {
-    border: none;
-    line-height: 38px;
-    -webkit-box-shadow: 1px 0 0 $lightgray inset;
-    -moz-box-shadow: 1px 0 0 $lightgray inset;
-    box-shadow: 1px 0 0 $lightgray inset;
-  }
-}
-
-/* line 11, ../../../../.rvm/gems/ruby-1.9.3-p194@chasingb/gems/zurb-foundation-3.0.9/scss/foundation/components/modules/_navbar.scss */
-.nav-bar > li.active {
-  background: $black;
-  border-color: $black;
-}
-/* line 12, ../../../../.rvm/gems/ruby-1.9.3-p194@chasingb/gems/zurb-foundation-3.0.9/scss/foundation/components/modules/_navbar.scss */
-.nav-bar > li.active > a {
-  color: white;
-  cursor: default;
-}
-/* line 13, ../../../../.rvm/gems/ruby-1.9.3-p194@chasingb/gems/zurb-foundation-3.0.9/scss/foundation/components/modules/_navbar.scss */
-.nav-bar > li.active:hover {
-  background: $black;
-  cursor: default;
-}
-/* line 15, ../../../../.rvm/gems/ruby-1.9.3-p194@chasingb/gems/zurb-foundation-3.0.9/scss/foundation/components/modules/_navbar.scss */
-.nav-bar > li:hover {
-  background: $black;
-}
-/* line 17, ../../../../.rvm/gems/ruby-1.9.3-p194@chasingb/gems/zurb-foundation-3.0.9/scss/foundation/components/modules/_navbar.scss */
-.nav-bar > li > a {
-  color: $brickred;
-  &:hover { color: darken($silver, 40%); }
-}
-
 .reveal-modal {
 background: $silver;
   h5, h6 { color: $tungsten; }
@@ -50,11 +12,6 @@ h4, h5, h6 { margin-bottom: 8px; margin-top: 10px; }
 hr {
   border: solid $tungsten;
   border-width: 1px 0 0;
-}
-
-ul.breadcrumbs {
-  background: #000000;
-  border: 1px solid #333333;
 }
 
 dt, dd { font-size: 16px; font-weight: bold; }
