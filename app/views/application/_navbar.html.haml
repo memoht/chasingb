@@ -21,7 +21,7 @@
     = link_to 'contact', contact_path
 
   %dd{class: current_page?(buy_path) ? "active" : ""}
-    = link_to 'buy now', buy_path, title: 'Buy the Chasing Buddha DVD Today!'
+    = link_to 'buy', buy_path, title: 'Buy the Chasing Buddha DVD Today!'
 
   - if signed_in?
     %dd{class: current_page?(dashboard_path) ? "active" : "inactive"}
