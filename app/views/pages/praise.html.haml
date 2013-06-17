@@ -1,4 +1,15 @@
 - provide(:title, 'Praise')
+
+/ The Orbit slider is initialized by calling .orbit() on #slider
+.row
+  .ten.columns.centered
+    #slider
+      = image_tag ("about_04.jpg")
+      = image_tag ("robina_06.jpg")     
+      = image_tag ("amiel_02.jpg")     
+      = image_tag ("amiel_04.jpg")      
+      = image_tag ("about_03.jpg")
+
 .row
   .five.columns.offset-by-one
     = render @evens || 'no praise'
