@@ -20,7 +20,7 @@ class Post < ActiveRecord::Base
   include Pacecar
 
   # memo: declare a default sort order
-  default_scope :order => 'position DESC'
+  default_scope :order => 'publish_date DESC'
   scope :even, -> { where("position % 2 = ?", "0") }
   scope :odd, -> { where("position % 2 = ?", "1") }
   
