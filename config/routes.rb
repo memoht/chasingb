@@ -5,7 +5,7 @@ Chasingb::Application.routes.draw do
     get page, controller: 'pages', action: page
   end
 
-  resources :posts
+  resources :posts, except: [:show]
   resources :quotes, except: [:show]
   match '/press', to: 'posts#index'
   root to: "pages#home"

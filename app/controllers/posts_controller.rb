@@ -23,7 +23,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(params[:post])
     if @post.save
-      redirect_to @post, notice: 'Post was successfully created.'
+      redirect_to posts_url, notice: 'Post was successfully created.'
     else
       render :new
     end
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update_attributes(params[:post])
-      redirect_to @post, notice: 'Post was successfully updated.'
+      redirect_to posts_url, notice: 'Post was successfully updated.'
     else
       render :edit
     end

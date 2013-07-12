@@ -1,3 +1,8 @@
-%h5= link_to post.title, post, :alt => "#{post.title} | by #{post.author}", :title => post.title       
-= post.blurb
+%h5= link_to post.title, post.url, alt: "#{post.title} | by #{post.author}"   
+= post.author + ", #{post.publish_date.strftime("%b %-d, %Y")}"
+%p
+  = markdown.render(h post.content).html_safe
+- if signed_in?
+  = link_to 'edit', edit_post_path(post), :class => 'small button secondary'
+  = link_to 'delete', post, :data => { :confirm => 'Are you sure?' }, :method => :delete, :title => 'Hasta la vista baby', :class => 'small button alert'
 %hr
