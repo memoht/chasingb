@@ -11,18 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130614135351) do
+ActiveRecord::Schema.define(:version => 20130712124403) do
 
   create_table "posts", :force => true do |t|
     t.string   "author"
-    t.string   "blurb"
-    t.string   "foto"
     t.string   "slug"
     t.string   "title"
     t.text     "content"
     t.date     "publish_date"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.string   "url"
+    t.integer  "position",     :default => 0
   end
 
   add_index "posts", ["slug"], :name => "index_posts_on_slug"
