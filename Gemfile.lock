@@ -276,7 +276,7 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unicode (0.4.4)
-    unicorn (4.6.3)
+    unicorn (4.7.0)
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
@@ -329,5 +329,5 @@ DEPENDENCIES
   shoulda
   simplecov
   uglifier (>= 1.0.3)
-  unicorn (~> 4.6.3)
+  unicorn (~> 4.7.0)
   zurb-foundation (~> 3.2.5)
