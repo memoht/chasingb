@@ -61,6 +61,6 @@ group :test do
 end
 
 group :production do
-  gem 'unicorn', '~> 4.6.3'
+  gem 'unicorn', '~> 4.7.0'
 end
 
