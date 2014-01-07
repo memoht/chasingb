@@ -16,7 +16,8 @@
     %p
       For orders for distributors, retailers, FPMT centers, etc., please email Kate Macdonald at
       = mail_to 'info@chasingbuddhafilm.com', "info@chasingbuddhafilm.com", :encode => "javascript", :subject => "Wholesale order request from Chasingbuddhafilm.com site", :title => "Send an email from your computer."
-.row
-  .ten.columns.end
     %hr
-    = render 'order_form'
+    %h6
+      %strong.red Buy the Chasing Buddha DVD using our secure order form.
+    = link_to 'Buy DVD Now', 'https://chasingbuddhafilm.wufoo.com/forms/chasing-buddha-dvd-order-form/', class: "large alert button radius"
+
