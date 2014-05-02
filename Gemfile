@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.1.0'
+ruby '2.1.1'
 
-gem 'rails', '3.2.16'
+gem 'rails', '3.2.17'
 gem 'pg'
 
 
@@ -11,7 +11,6 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.6'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '>= 1.0.3'
-  gem 'asset_sync', '~> 1.0.0'
   gem 'compass-rails', '~> 1.0.3'
   gem 'zurb-foundation', '~> 3.2.5'
 end
@@ -47,7 +46,7 @@ group :development do
   gem 'brakeman', '~> 2.0.0'
   gem 'bullet', '~> 4.7'
   gem 'letter_opener', '>= 1.1'
-  gem 'rails-footnotes', "~> 3.7.9"
+  gem 'rails-footnotes'
   gem 'quiet_assets', '~> 1.0.2'
   gem 'sextant'
 end

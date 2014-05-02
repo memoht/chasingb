@@ -1,27 +1,15 @@
-!!!
-/ paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
-/[if lt IE 7 ] <html class="ie6" lang="en">
-/[if IE 7 ] <html class="ie7" lang="en">
-/[if IE 8 ] <html class="ie8" lang="en">
-/ [if (gte IE 9)|!(IE)]><!
+!!! 5
 %html{:lang => "en"}
-  / <![endif]
   %head
     %meta{:charset => "utf-8"}
-    / Set the viewport width to device width for mobile
+    - # Set the viewport width to device width for mobile
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %title= full_title(yield(:title))
-    / Included CSS Files
     = stylesheet_link_tag    "application"
-    / Included JS Files
-    = javascript_include_tag "application"
     = csrf_meta_tags
-    - unless Rails.env.development?
-      = render 'analytics'
-
-  / memo: refer to application_helper
   %body{:class => body_class}
     %header
       = render 'header'
- 
     = yield
+    = javascript_include_tag "application"
+    = render 'analytics' unless Rails.env.development?
