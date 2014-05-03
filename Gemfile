@@ -19,7 +19,7 @@ gem 'jquery-rails', '~> 3.0.4'
 
 # Project specific gems
   gem 'carrierwave', '~> 0.9'
-  gem 'cancan', '~> 1.6.9'
+  gem 'cancancan', '~> 1.7'
   gem 'clearance', '1.0'
   gem 'exception_notification', '~> 3.0'
   gem 'haml', '~> 4.0.4'
