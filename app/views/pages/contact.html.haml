@@ -2,21 +2,22 @@
 
 / The Orbit slider is initialized by calling .orbit() on #slider
 .row
-  .ten.columns.centered
-    #slider
-      = image_tag ("contact_01.jpg")
-      = image_tag ("contact_02.jpg")     
-      = image_tag ("contact_03.jpg")
-      = image_tag ("contact_04.jpg")
-
+  .small-10.small-centered.columns
+    .orbitpad
+      %ul.contact-orbit{"data-orbit" => ""}
+        %li= image_tag ("contact_01.jpg")
+        %li= image_tag ("contact_02.jpg")     
+        %li= image_tag ("contact_03.jpg")
+        %li= image_tag ("contact_04.jpg")
+  %br
 .row
-  .three.columns.offset-by-one
+  .small-3.small-offset-1.columns
     = image_tag('dvd_cover.png', size: "211x300", alt: "DVD cover for Chasing Buddha Film")
-  .seven.columns.end
+  .small-7.columns.end
     .panel.callout
       Questions? Contact Kate Macdonald at:  
       = mail_to 'kate@bodhichittatrust.com', "kate@bodhichittatrust.com", :encode => "javascript", :subject => "Contact from Chasingbuddhafilm.com site", :title => "Send an email from your computer."
     
-    %h4= link_to 'robinacourtin.com', "http://www.robinacourtin.com", target: "_blank"
-    %h4= link_to 'fpmt.org', "http://www.fpmt.org", target: "_blank"
-    %h4= link_to 'floodprojects.com', "http://www.floodprojects.com", target: "_blank"
+    %h5= link_to 'robinacourtin.com', "http://www.robinacourtin.com", target: "_blank"
+    %h5= link_to 'fpmt.org', "http://www.fpmt.org", target: "_blank"
+    %h5= link_to 'floodprojects.com', "http://www.floodprojects.com", target: "_blank"

@@ -1,14 +1,15 @@
 - provide(:title, 'Robina Courtin')
 
 .row
-  .ten.columns.centered
-    #slider
-      = image_tag ("robina_01.jpg")
-      = image_tag ("robina_02.jpg")
-      = image_tag ("robina_06.jpg")
-      = image_tag ("robina_07.jpg")
+  .small-10.small-centered.columns
+    .orbitpad
+      %ul.robina-orbit{"data-orbit" => ""}
+        %li= image_tag ("robina_01.jpg")
+        %li= image_tag ("robina_02.jpg")
+        %li= image_tag ("robina_06.jpg")
+        %li= image_tag ("robina_07.jpg")
 .row
-  .five.columns.offset-by-one
+  .small-5.small-offset-1.columns
     %p
       Australian-born Tibetan Buddhist nun Robina Courtin travels the world teaching Buddhist psychology and philosophy. Well known for her work for 14 years with people in prisons in the US and Australia, including inmates on death row, Robina’s life and work has been the subject of Australian Broadcasting Commission’s 
       %i Key to Freedom 
@@ -28,7 +29,7 @@
     %p
       “But I kept moving internally. I wasn’t satisfied and found myself wanting something spiritual again.” In her quest for a spiritual path Robina took up martial arts, continuing in New York in 1974 where she joined a women’s dojo. Back in Australia in 1976, a broken foot stopped her in her tracks and, while recuperating, attended a Tibetan Buddhist course in Queensland given by Lama Yeshe and Lama Zopa Rinpoche.
 
-  .five.columns.end
+  .small-5.columns.end
     %p
       “Finally I found what my mind had been searching for: a coherent way of seeing the world and practical methods for life.” She was ordained as a Buddhist nun at 
       = link_to 'Kopan Monastery', 'http://www.kopanmonastery.com', target: "_blank"

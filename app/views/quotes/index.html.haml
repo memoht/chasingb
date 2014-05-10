@@ -1,11 +1,11 @@
 .row
-  .twelve.columns
+  .small-12.columns
     - @quotes.each do |quote|
       .row
-        .eight.columns
+        .small-8.columns
           %p
             = quote.content
             %cite= "- " +  quote.author    
-        .three.columns.offset-by-one
+        .small-3.small-offset-1.columns
           = link_to 'edit', edit_quote_path(quote), class: 'small button secondary'
           = link_to 'delete', quote, method: :delete, data: { confirm: 'Are you sure?' }, class: 'small button alert', title: 'Hasta la vista baby'

@@ -1,18 +1,19 @@
 / The Orbit slider is initialized by calling .orbit() on #slider
 .row
-  .ten.columns.centered
-    #slider
-      = image_tag ("about_01.jpg")
-      = image_tag ("about_02.jpg")      
-      = image_tag ("about_03.jpg")
-      = image_tag ("about_04.jpg") 
+  .small-10.small-centered.columns
+    .orbitpad
+      %ul.about-orbit{"data-orbit" => ""}
+        %li= image_tag ("about_01.jpg")
+        %li= image_tag ("about_02.jpg")      
+        %li= image_tag ("about_03.jpg")
+        %li= image_tag ("about_04.jpg") 
     %p
       %i
         %strong.red
           The much-anticipated first commercial release of the award-winning documentary about Buddhist nun Robina Courtin by acclaimed Australian filmmaker Amiel Courtin-Wilson. Plus 2.5 hours of extra material, including a recent interview with Robina and outtakes of interviews with inmates at Kentucky State Penitentiary.
 
 .row
-  .five.columns.offset-by-one
+  .small-5.small-offset-1.columns
     %p
       Australian ex-Catholic, ex-political activist and feminist, Robina Courtin has been a Buddhist nun since 1978. Teaching Buddhism around the world, she shatters the stereotype of a Buddhist nun, her intense and direct style leaving an indelible impression on everyone she meets.
  
@@ -21,7 +22,7 @@
 
     %p
       A bold, powerful, multi-award-winning film from internationally acclaimed filmmaker Amiel Courtin-Wilson, whose uncompromising films have screened
-  .five.columns.end 
+  .small-5.columns.end 
     %p
       at festivals including Sundance 
       %i (Chasing Buddha),
