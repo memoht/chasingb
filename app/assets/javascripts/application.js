@@ -13,10 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require foundation/app
 //= require moment
 //= require pikaday
 //= require pages
 //= require posts
-//= require markitup
-//= require set
+
+$(function(){ $(document).foundation(); });
