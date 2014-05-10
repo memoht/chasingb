@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.1.2'
 
-gem 'rails', '3.2.17'
+gem 'rails', '3.2.18'
 gem 'pg'
 
 
@@ -10,17 +10,15 @@ gem 'pg'
 group :assets do
   gem 'sass-rails',   '~> 3.2.6'
   gem 'coffee-rails', '~> 3.2.2'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'compass-rails', '~> 1.0.3'
-  gem 'zurb-foundation', '~> 3.2.5'
+  gem 'uglifier', '>= 1.3.0'
+  gem 'foundation-rails', "~> 5.2.2.0"
 end
 
-gem 'jquery-rails', '~> 3.0.4'
+gem 'jquery-rails', '~> 3.1'
 
 # Project specific gems
-  gem 'carrierwave', '~> 0.9'
-  gem 'cancancan', '~> 1.7'
-  gem 'clearance', '1.0'
+  gem 'cancancan', '~> 1.8'
+  gem 'clearance', '~> 1.3'
   gem 'exception_notification', '~> 3.0'
   gem 'haml', '~> 4.0.4'
   gem 'haml-rails', '~> 0.4'
@@ -40,10 +38,8 @@ group :development, :test do
 end
 
 group :development do
-  gem 'better_errors', '~> 1.0.1'
-  gem 'binding_of_caller'
-  gem 'brakeman', '~> 2.0.0'
-  gem 'bullet', '~> 4.7'
+  gem 'brakeman', '~> 2.5.0', require: false
+  gem 'bullet', '~> 4.9'
   gem 'letter_opener', '>= 1.1'
   gem 'rails-footnotes'
   gem 'quiet_assets', '~> 1.0.2'

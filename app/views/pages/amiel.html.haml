@@ -1,15 +1,16 @@
 - provide(:title, 'Amiel Courtin-Wilson')
 
 .row
-  .ten.columns.centered
-    #slider
-      = image_tag ("amiel_01.jpg")
-      = image_tag ("amiel_02.jpg")
-      = image_tag ("amiel_03.jpg")
-      = image_tag ("amiel_05.jpg")
+  .small-10.small-centered.columns
+    .orbitpad
+      %ul.amiel-orbit{"data-orbit" => ""}
+        %li= image_tag ("amiel_01.jpg")
+        %li= image_tag ("amiel_02.jpg")
+        %li= image_tag ("amiel_03.jpg")
+        %li= image_tag ("amiel_05.jpg")
 
 .row
-  .five.columns.offset-by-one
+  .small-5.small-offset-1.columns
     :markdown
       **Amiel Courtin-Wilson made his first film at age 9 and at 17 won the Longford Nova Award at the 1996 St Kilda Film Festival. At age 19 Amiel wrote, directed and produced *Chasing Buddha*, his debut feature documentary, which premiered at Sundance in 2000. Chasing Buddha was nominated for an Australian Film Institute (AFI) Award for Best Direction, and won a slew of additional awards, including Best Documentary at the 2000 Sydney Film Festival’s Dendy Awards and the IF (Inside Film) Awards.**
 
@@ -20,7 +21,7 @@
       
       Amiel’s 2009 short documentary *Cicada* had its international premiere at Cannes Film Festival in 2009, and went on to win the SBS Television Award at the 2009 St Kilda Film Festival and was nominated for 
 
-  .five.columns.end
+  .small-5.columns.end
     :markdown
       Best Documentary at the 2009 Australian Director's Guild (ADG) Awards and the 2009 ATOM Awards.
 

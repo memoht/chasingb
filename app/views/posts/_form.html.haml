@@ -1,9 +1,9 @@
 .row
-  .ten.columns
+  .small-10.columns.end
     = form_for(@post) do |f|
       = render 'error_messages', object: f.object
       .row
-        .eight.columns
+        .small-8.columns.end
           .field
             = f.label :title
             = f.text_field :title, { placeholder: 'enter a title article' }
@@ -12,7 +12,7 @@
             = f.text_field :url, { placeholder: 'enter a web url including http://' }
           .field
             = f.label :content
-            = f.text_area :content, { rows: 10, id: 'contentmarkdown', placeholder: 'this text field uses markdown to help format  your content' }
+            = f.text_area :content, { rows: 10 }
           .field
             = f.label :author
             = f.text_field :author
@@ -24,7 +24,5 @@
             = f.number_field(:position, step: "5.0")
 
         %hr
-        .row
-          .six.columns
-            = f.submit 'save', class: 'secondary button'
-            = link_to 'cancel', :back, class: 'alert button'
+        = f.submit 'save', class: 'secondary button'
+        = link_to 'cancel', :back, class: 'alert button'

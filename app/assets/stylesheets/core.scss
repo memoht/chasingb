@@ -14,9 +14,15 @@ hr {
   border-width: 1px 0 0;
 }
 
-dl.sub-nav {
-  position: relative; top: $navBarHeight / 3;
-  dt, dd { font-size: 16px; font-weight: bold; margin-bottom: 5px; }
+.sub-nav {
+  position: relative; top: $topbar-height / 3;
+  dd { font-size: 16px; font-weight: normal; margin-bottom: 5px; margin-left: 8px; }
+}
+
+.panel.callout {
+    border-color: #9d2020;
+    background: #c82828;
+    color: #fff;
 }
 
 #quotebox { 
@@ -28,10 +34,6 @@ cite, .red { color: $brickred; }
 
 .price { color: $brickred; font-size: 20px; font-weight: bold; margin-bottom: 5px; }
 
-/* Graceful loading state for Orbit http://foundation.zurb.com/old-docs/f3/orbit.php  */
+textarea { height: auto; }
 
-#slider { background-image: url("loading.gif") center center #000000 no-repeat; height: 300px;  }
-#slider img { display: none; }
-
-#slider.orbit { background: none;  padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid $tungsten;}
-#slider.orbit img { display: block; }
+.orbitpad { margin-bottom: 30px; }

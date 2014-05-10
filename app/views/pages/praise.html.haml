@@ -2,15 +2,16 @@
 
 / The Orbit slider is initialized by calling .orbit() on #slider
 .row
-  .ten.columns.centered
-    #slider
-      = image_tag ("praise_01.jpg")
-      = image_tag ("praise_02.jpg")
-      = image_tag ("praise_03.jpg")
-      = image_tag ("praise_04.jpg")
+  .small-10.small-centered.columns
+    .orbitpad
+      %ul.praise-orbit{"data-orbit" => ""}
+        = image_tag ("praise_01.jpg")
+        = image_tag ("praise_02.jpg")
+        = image_tag ("praise_03.jpg")
+        = image_tag ("praise_04.jpg")
 
 .row
-  .five.columns.offset-by-one
+  .small-5.small-offset-1.columns
     = render @evens || 'no praise'
-  .five.columns.end
+  .small-5.columns.end
     = render @odds || 'no praise'

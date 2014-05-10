@@ -1,9 +1,9 @@
-= form_for :session, :url => session_path do |form|
+= form_for :session, :url => session_path do |f|
   .text_field
-    = form.label :email
-    = form.text_field :email, :type => 'email'
+    = f.label :email
+    = f.text_field :email, :type => 'email'
   .text_field
-    = form.label :password
-    = form.password_field :password
+    = f.label :password
+    = f.password_field :password
   .submit_field
-    = form.submit 'Sign in'
+    = f.submit 'Sign in', class: "small button radius"
