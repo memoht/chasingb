@@ -41,6 +41,6 @@ Chasingb::Application.configure do
     exception_recipients: 'guillermo@brownbox.me'
 
   config.action_mailer.default_url_options = { :host => 'chasingb.dev' }
-  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.delivery_method = :test
 
 end
