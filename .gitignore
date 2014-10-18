@@ -23,7 +23,6 @@
 .rspec
 .sass-cache
 /config/config.yml
-/config/database.yml
 /coverage.data
 /coverage/
 /db/*.javadb/
@@ -52,10 +51,7 @@
 # Mac finder artifacts
 .DS_Store
 
-# Carrierwave uploads folders
-/public/uploads/*
-
 #other specific things
 .env
-latest.dump
+heroku.dump
 brakeman.html

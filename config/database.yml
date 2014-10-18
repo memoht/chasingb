@@ -1,0 +1,20 @@
+# PostgreSQL. Versions 8.2 and up are supported.
+
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *defaults
+  database: chasingb_development
+  host: localhost
+
+test:
+  <<: *defaults
+  database: chasingb_test
+  host: localhost
+
+production:
+  <<: *defaults
+  database: chasingb_production
