@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :authorize, only: [:dashboard]
+  before_action :authorize, only: [:dashboard]
 
   def about
   end
@@ -12,7 +12,7 @@ class PagesController < ApplicationController
 
   def contact
   end
-  
+
   def dashboard
   end
 
@@ -24,8 +24,7 @@ class PagesController < ApplicationController
     @evens = Quote.even
     @odds = Quote.odd
   end
-  
+
   def robina
   end
-
 end

@@ -1,48 +1,69 @@
 class PostsController < ApplicationController
-  before_filter :authorize, except: [:index, :show]
- 
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authorize, except: [:index, :show]
+
   def index
-      @posts = Post.all
-      @odds = Post.odd
-      @evens = Post.even
+    @posts = Post.order(publish_date: :desc)
+    @odds = Post.odd
+    @evens = Post.even
   end
-  
+
   def show
-    @post = Post.find(params[:id])
     @title = 'Posts | ' + @post.title
   end
-  
+
   def new
     @post = Post.new
   end
-  
+
   def edit
-    @post = Post.find(params[:id])
   end
-  
+
   def create
-    @post = Post.new(params[:post])
-    if @post.save
-      redirect_to posts_url, notice: 'Post was successfully created.'
-    else
-      render :new
+    @post = Post.new(post_params)
+
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to posts_url, notice: 'Post was successfully created.' }
+        format.json { render :show, status: :created, location: posts_url }
+      else
+        flash[:alert] = "Error(s): " + @post.errors.full_messages.join(' • ')
+        format.html { render :new }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
     end
   end
-  
+
   def update
-    @post = Post.find(params[:id])
-    if @post.update_attributes(params[:post])
-      redirect_to posts_url, notice: 'Post was successfully updated.'
-    else
-      render :edit
+    respond_to do |format|
+      if @post.update(post_params)
+        format.html { redirect_to posts_url, notice: 'Post was successfully updated.' }
+        format.json { render :show, status: :ok, location: posts_url }
+      else
+        flash[:alert] = "Error(s): " + @post.errors.full_messages.join(' • ')
+        format.html { render :edit }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
     end
   end
-  
+
   def destroy
-    @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_url
+    respond_to do |format|
+      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_post
+      @post = Post.find(params[:id])
+    end
 
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def post_params
+      params.require(:post).permit(:author, :content, :position, :publish_date, :slug, :title, :url)
+    end
 end
+
