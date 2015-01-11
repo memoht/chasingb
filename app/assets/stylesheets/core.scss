@@ -1,5 +1,18 @@
+.field_with_errors {
+  label {
+    color: $alert-color;
+    &:after {
+      content: "*";
+    }
+  }
+  input, select, textarea {
+    border-left: solid thick $alert-color;
+    color: $alert-color;
+  }
+}
+
 .reveal-modal {
-background: $silver;
+  background: $silver;
   h5, h6 { color: $tungsten; }
 }
 
@@ -25,9 +38,9 @@ hr {
     color: #fff;
 }
 
-#quotebox { 
-  padding: 10px 0px; 
-  font-size: 16px; 
+#quotebox {
+  padding: 10px 0px;
+  font-size: 16px;
   line-height: 1.5;
 }
 cite, .red { color: $brickred; }
