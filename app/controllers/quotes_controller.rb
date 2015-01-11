@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: [:show, :edit, :update, :destroy]
-  before_action :authorize
+  before_action :require_login
 
   def index
     @quotes = Quote.all

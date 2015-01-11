@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :authorize, only: [:dashboard]
+  before_action :require_login, only: [:dashboard]
 
   def about
   end
