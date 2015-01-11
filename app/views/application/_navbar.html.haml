@@ -26,14 +26,14 @@
   - if signed_in?
     %dd{class: current_page?(dashboard_path) ? "active" : "inactive"}
       = link_to 'admin', dashboard_path
-   
+
     %dd= link_to 'sign out', sign_out_path, method: :delete
 
-  %dd= link_to image_tag('icon-facebook.png'), 
-                      "https://www.facebook.com/pages/Chasing-Buddha-a-film-by-Amiel-Courtin-Wilson/215601791926882", 
-                      title: "Chasing Buddha is on Facebook", 
+  %dd= link_to image_tag('icon-facebook.png'),
+                      "https://www.facebook.com/pages/Chasing-Buddha-a-film-by-Amiel-Courtin-Wilson/215601791926882",
+                      title: "Chasing Buddha is on Facebook",
                       target: "_blank"
-  %dd= link_to image_tag('icon-twitter.png'), 
-                      "https://www.twitter.com/robinacourtin", 
-                      title: "Follow @robinacourtin on Twitter", 
+  %dd= link_to image_tag('icon-twitter.png'),
+                      "https://www.twitter.com/robinacourtin",
+                      title: "Follow @robinacourtin on Twitter",
                       target: "_blank"

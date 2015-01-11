@@ -1,7 +1,6 @@
 .row
   .eight.columns.end
     = form_for(@quote) do |f|
-      = render 'error_messages', object: f.object
       .field
         = f.label :content
         = f.text_area :content, { rows: 4, placeholder: 'enter quote text up to 255 characters max' }

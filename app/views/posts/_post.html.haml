@@ -4,6 +4,7 @@
 %quote
   = post.content
 - if signed_in?
-  = link_to 'edit', edit_post_path(post), :class => 'small button secondary'
-  = link_to 'delete', post, :data => { :confirm => 'Are you sure?' }, :method => :delete, :title => 'Hasta la vista baby', :class => 'small button alert'
+  %br
+  = link_to 'edit', edit_post_path(post), :class => 'tiny button secondary'
+  = link_to 'delete', post, :data => { :confirm => 'Are you sure?' }, :method => :delete, :title => 'Hasta la vista baby', :class => 'tiny button alert'
 %hr

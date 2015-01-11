@@ -7,5 +7,5 @@
             = quote.content
             %cite= "- " +  quote.author
         .small-3.small-offset-1.columns
-          = link_to 'edit', edit_quote_path(quote), class: 'small button secondary'
-          = link_to 'delete', quote, method: :delete, data: { confirm: 'Are you sure?' }, class: 'small button alert', title: 'Hasta la vista baby'
+          = link_to 'edit', edit_quote_path(quote), class: 'tiny button secondary'
+          = link_to 'delete', quote, method: :delete, data: { confirm: 'Are you sure?' }, class: 'tiny button alert'
