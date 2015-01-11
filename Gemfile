@@ -17,9 +17,7 @@ gem 'clearance'
 gem 'exception_notification'
 gem 'haml'
 gem 'haml-rails'
-gem 'pacecar'
 gem 'redcarpet'
-
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 

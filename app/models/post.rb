@@ -1,7 +1,4 @@
 class Post < ActiveRecord::Base
-  # Includes and Extends
-  include Pacecar
-
   # Scopes
   scope :even, -> { where("position % 2 = ?", "0") }
   scope :odd, -> { where("position % 2 = ?", "1") }
