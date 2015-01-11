@@ -3,7 +3,7 @@
     = form_for(@quote) do |f|
       .field
         = f.label :content
-        = f.text_area :content, { rows: 4, placeholder: 'enter quote text up to 255 characters max' }
+        = f.text_area :content, { rows: 4, placeholder: 'text up to 255 characters max' }
       .field
         = f.label :author
         = f.text_field :author, { placeholder: 'author name' }
