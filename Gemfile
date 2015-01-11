@@ -12,7 +12,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 # Project specific gems
-gem 'cancancan'
 gem 'clearance'
 gem 'exception_notification'
 gem 'haml'
