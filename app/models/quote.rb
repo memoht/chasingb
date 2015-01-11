@@ -1,11 +1,14 @@
 class Quote < ActiveRecord::Base
-  attr_accessible :author, :content
-
-  validates :content, :author, presence: true
-  validates_length_of :content, :author, maximum: 255
-
-  # memo: https://github.com/thoughtbot/pacecar
-  scope :prospect, -> { where("status like ?", "%prospect%") }
+  # Scopes
   scope :odd, -> { where("id % 2 = ?", "0") }
   scope :even, -> { where("id % 2 = ?", "1") }
+
+  # Validations
+  validates :author,
+    presence: true,
+    length: { maximum: 60 }
+
+  validates :content,
+    presence: true,
+    length: { maximum: 250 }
 end
