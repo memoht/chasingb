@@ -55,7 +55,7 @@
 $rem-base: 15px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
-@import "foundation/functions";
+@import "foundation-sites-5/scss/foundation/functions";
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
@@ -1444,4 +1444,4 @@ $sub-nav-item-divider-margin: rem-calc(6);
 // $include-legacy-visibility-classes: true;
 // $include-accessibility-classes: true;
 
-@import 'foundation';
+@import 'foundation-sites-5/scss/foundation';

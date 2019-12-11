@@ -1,12 +1,11 @@
 / The Orbit slider is initialized by calling .orbit() on #slider
 .row
   .small-10.small-centered.columns
-    .orbitpad
-      %ul.about-orbit{"data-orbit" => ""}
-        %li= image_tag ("about_01.jpg")
-        %li= image_tag ("about_02.jpg")      
-        %li= image_tag ("about_03.jpg")
-        %li= image_tag ("about_04.jpg") 
+    .orbit
+      %div= image_tag ("about_01.jpg")
+      %div= image_tag ("about_02.jpg")
+      %div= image_tag ("about_03.jpg")
+      %div= image_tag ("about_04.jpg")
     %p
       %i
         %strong.red
@@ -16,25 +15,27 @@
   .small-5.small-offset-1.columns
     %p
       Australian ex-Catholic, ex-political activist and feminist, Robina Courtin has been a Buddhist nun since 1978. Teaching Buddhism around the world, she shatters the stereotype of a Buddhist nun, her intense and direct style leaving an indelible impression on everyone she meets.
- 
+
     %p
       In the heart of America’s bible belt, Robina visits Kentucky State Penitentiary, guiding death row inmates and others on the path to enlightenment. Determined to harness their minds and deal with their violent crimes, they inspire Robina to work even harder at her own rigorous spiritual practice.
 
     %p
       A bold, powerful, multi-award-winning film from internationally acclaimed filmmaker Amiel Courtin-Wilson, whose uncompromising films have screened
-  .small-5.columns.end 
+  .small-5.columns.end
     %p
-      at festivals including Sundance 
+      at festivals including Sundance
       %i (Chasing Buddha),
-      Cannes 
-      %i (Cicada, 2009) 
-      and the Venice Film Festival 
+      Cannes
+      %i (Cicada, 2009)
+      and the Venice Film Festival
       %I (Hail, 2011).
 
     %p
       = image_tag('about_quote.png', size: "400x100", alt: "quote: confrontational, inspiring")
- 
+
     %p
-      After 14 years of running 
+      After 14 years of running
       = link_to 'Liberation Prison Project,', 'http://www.liberationprisonproject.org/', target: "_blank"
       which helps thousands of prisoners throughout the USA and Australia, Robina passed on the job of executive director to a colleague in Australia in 2009. She maintains contact with many old friends in prison.
+
+= render 'orbit'

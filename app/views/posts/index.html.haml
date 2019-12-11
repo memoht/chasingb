@@ -3,14 +3,15 @@
 / The Orbit slider is initialized by calling .orbit() on #slider
 .row
   .small-10.small-centered.columns
-    .orbitpad
-      %ul.press-orbit{"data-orbit" => ""}
-        %li= image_tag ("robina_03.jpg")
-        %li= image_tag ("press_01.jpg")
-        %li= image_tag ("press_02.jpg")
-        %li= image_tag ("amiel_04.jpg") 
+    .orbit
+      %div= image_tag ("robina_03.jpg")
+      %div= image_tag ("press_01.jpg")
+      %div= image_tag ("press_02.jpg")
+      %div= image_tag ("amiel_04.jpg")
 .row
   .small-5.small-offset-1.columns
     = render @evens || 'no posts'
   .small-5.columns.end
     = render @odds || 'no posts'
+
+= render 'orbit'
