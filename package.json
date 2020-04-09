@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "^4.0.7",
+    "foundation-sites-5": "^5.5.3",
+    "jquery": "^3.4.1",
+    "slick-carousel": "^1.8.1",
+    "turbolinks": "^5.2.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.9.0"
+  }
+}

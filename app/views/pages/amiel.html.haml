@@ -2,12 +2,11 @@
 
 .row
   .small-10.small-centered.columns
-    .orbitpad
-      %ul.amiel-orbit{"data-orbit" => ""}
-        %li= image_tag ("amiel_01.jpg")
-        %li= image_tag ("amiel_02.jpg")
-        %li= image_tag ("amiel_03.jpg")
-        %li= image_tag ("amiel_05.jpg")
+    .orbit
+      %div= image_tag ("amiel_01.jpg")
+      %div= image_tag ("amiel_02.jpg")
+      %div= image_tag ("amiel_03.jpg")
+      %div= image_tag ("amiel_05.jpg")
 
 .row
   .small-5.small-offset-1.columns
@@ -25,10 +24,13 @@
     :markdown
       Best Documentary at the 2009 Australian Director's Guild (ADG) Awards and the 2009 ATOM Awards.
 
-      ![A filmaker of visionary amition](https://chasingb.s3.amazonaws.com/assets/amiel_quote.png)
+      ![A filmaker of visionary amition](http://www.chasingbuddhafilm.com/assets/amiel_quote.png)
 
       **Amiel has directed work for Opera Australia, Chunky Move contemporary dance company and musical artists such as the Avalanches and Mix Master Mike. His films have screened at the National Gallery of Victoria, the Gallery of New South Wales and he is a regular contributor to national and international film and art magazines and journals.** His first solo exhibition of drawings was held at Utopian Slumps Gallery in Melbourne in 2009.
 
       **After forming the production entity Flood Projects in 2008, Amiel’s feature documentary *Bastardy* won the Best Documentary Jury Prize at the 2009 Film Critics Circle of Australia Awards (FCCA) and Best Documentary at the ATOM Awards. *Bastardy* was released nationally, received huge critical acclaim across Australia and was nominated for three AFI Awards.**
 
       Amiel was also recently commissioned to create a short film for the 70th Anniversary of the Venice Film Festival as part of a project called “Venice Future Reloaded” alongside directors such as Bernardo Bertollucci, Catherine Breillat, Monte Hellman, Atom Egoyan and Paul Schrader.
+
+
+= render 'orbit'

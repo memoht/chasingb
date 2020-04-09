@@ -17,7 +17,7 @@
             = f.text_field :author
           .field
             = f.label :publish_date
-            = f.text_field :publish_date, id: 'calendar'
+            = f.date_field :publish_date
           .field
             = f.label :position
             = f.number_field(:position, step: "5.0")

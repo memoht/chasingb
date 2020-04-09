@@ -2,21 +2,20 @@
 
 .row
   .small-10.small-centered.columns
-    .orbitpad
-      %ul.robina-orbit{"data-orbit" => ""}
-        %li= image_tag ("robina_01.jpg")
-        %li= image_tag ("robina_02.jpg")
-        %li= image_tag ("robina_06.jpg")
-        %li= image_tag ("robina_07.jpg")
+    .orbit
+      %div= image_tag ("robina_01.jpg")
+      %div= image_tag ("robina_02.jpg")
+      %div= image_tag ("robina_06.jpg")
+      %div= image_tag ("robina_07.jpg")
 .row
   .small-5.small-offset-1.columns
     %p
-      Australian-born Tibetan Buddhist nun Robina Courtin travels the world teaching Buddhist psychology and philosophy. Well known for her work for 14 years with people in prisons in the US and Australia, including inmates on death row, Robina’s life and work has been the subject of Australian Broadcasting Commission’s 
-      %i Key to Freedom 
-      (2008), as well as 
+      Australian-born Tibetan Buddhist nun Robina Courtin travels the world teaching Buddhist psychology and philosophy. Well known for her work for 14 years with people in prisons in the US and Australia, including inmates on death row, Robina’s life and work has been the subject of Australian Broadcasting Commission’s
+      %i Key to Freedom
+      (2008), as well as
       %i Chasing Buddha,
       which her nephew Amiel made in 1999.
- 
+
     %p
       Born in Melbourne in 1944, she was educated at a Catholic convent. “From the time I first went to Mass, I knew I wanted to be a priest,” she says. “But everyone laughed and said it wasn’t possible – I’d have to be a nun instead.” When she was 12, she – unsuccessfuly – begged her mother to allow her to become a nun like her hero, St. Thérèse of Lisieux.
 
@@ -31,7 +30,7 @@
 
   .small-5.columns.end
     %p
-      “Finally I found what my mind had been searching for: a coherent way of seeing the world and practical methods for life.” She was ordained as a Buddhist nun at 
+      “Finally I found what my mind had been searching for: a coherent way of seeing the world and practical methods for life.” She was ordained as a Buddhist nun at
       = link_to 'Kopan Monastery', 'http://www.kopanmonastery.com', target: "_blank"
       in Kathmandu in February 1978.
 
@@ -45,18 +44,20 @@
       When he was 19, in 1998, he emailed Robina, who was then based in the United States, saying he wanted to write a script about her life. “Don’t just write the script,” she told him. “Why don’t you come and make the movie?” And he did.
 
     %p
-      Robina had been working with people in prison since 1996. “Such inspiring work. People with nothing and no one: so much determination to work on their minds, change themselves.” A central part of 
-      %i Chasing Buddha 
-      is the footage of her visit to Kentucky State Penitentiary. She passed on the running of 
+      Robina had been working with people in prison since 1996. “Such inspiring work. People with nothing and no one: so much determination to work on their minds, change themselves.” A central part of
+      %i Chasing Buddha
+      is the footage of her visit to Kentucky State Penitentiary. She passed on the running of
       = link_to 'Liberation Prison Project', 'http://www.liberationprisonproject.org/', target: "_blank"
       in 2009.
 
     %p
-      She now teaches full time around the world at the centers of her teachers, Lama Thubten Yeshe and Lama Zopa Rinpoche, for whom she has worked since her ordination in their 
+      She now teaches full time around the world at the centers of her teachers, Lama Thubten Yeshe and Lama Zopa Rinpoche, for whom she has worked since her ordination in their
       = link_to 'Foundation for the Preservation of the Mahayana Tradition,', 'http://www.fpmt.org', target: "_blank"
-      a worldwide network of Buddhist centers and activities. As well as running the prison project, over the years she has served as editorial director of 
+      a worldwide network of Buddhist centers and activities. As well as running the prison project, over the years she has served as editorial director of
       = link_to 'Wisdom Publications', 'http://www.wisdompubs.org', target: "_blank"
-      and editor of 
+      and editor of
       %i
         = link_to 'Mandala,', 'http://mandala.fpmt.org', target: "_blank"
       the magazine of the  FPMT.
+
+= render 'orbit'
